@@ -33,6 +33,7 @@ int type(char *s, size_t len) {
 			switch (*(s + 1)) {
 				case 't': vk = VK_TAB; break;
 				case 'n': vk = VK_RETURN; break;
+				case 's': vk = VK_SPACE; break;
 			}
 			if (vk) {
 				ENQUEUE(vk, 0);
