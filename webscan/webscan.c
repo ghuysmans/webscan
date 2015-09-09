@@ -80,7 +80,7 @@ void handle_client(int sock, struct sockaddr_in *sa, socklen_t sal, int debug) {
 		else {
 			if (!stricmp(buf, "GET")) {
 				size_t len = strlen(p+1);
-				if (len) {
+				if (strcmp(p+1, "favicon.ico") && len) {
 					printf("%s%s\n", addr, p);
 					Sleep(debug * 1000);
 					if (type(p + 1, len))
